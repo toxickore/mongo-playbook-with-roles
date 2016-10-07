@@ -1,8 +1,3 @@
 ---
-  remote_user: emerson
-  tasks:
-
-    - name: Install mongodb-server
-      apt: name=mongodb-server state=latest
-    - name: Install mongodb-clients
-      apt: name=mongodb-clients state=latest
+  - name: Install mongodb-server
+    apt: name=mongodb-server state=latest

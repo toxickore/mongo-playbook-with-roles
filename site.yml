@@ -1,6 +1,4 @@
 ---
-- hosts: mongo_primary
+- hosts: mongo_cluster
   roles:
-    - mongo_primary
-    - mongo_secondary
-    - mongo_arbiter
+  - mongo_primary
