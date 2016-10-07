@@ -3,6 +3,4 @@
   file: path=/tmp/mongo-replica state=directory mode=0755
  
 - name: Copy the primary.js script to /tmp/mongo-replica
-  template:
-    src=templates/primary.js 
-    dst=/tmp/mongo-replica/primary.js
+  copy: src=primary.js dest=/tmp/mongo-replica/primary.js
