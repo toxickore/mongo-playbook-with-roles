@@ -1,0 +1,6 @@
+---
+- hosts: mongo_primary
+  roles:
+    - mongo_primary
+    - mongo_secondary
+    - mongo_arbiter
