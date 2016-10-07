@@ -1,4 +1,5 @@
 ---
 - hosts: mongo_cluster
+  remote_user: emerson
   roles:
   - mongo_primary
