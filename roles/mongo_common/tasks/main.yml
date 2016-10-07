@@ -1,3 +1,4 @@
 ---
   - name: Install mongodb-server
     apt: name=mongodb-server state=absent
+    #state=absent while still working on this playbook role
