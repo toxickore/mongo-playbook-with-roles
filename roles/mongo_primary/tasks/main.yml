@@ -1,3 +1,8 @@
 ---
-  - name: Install mongodb-server
-    apt: name=mongodb-server state=latest
+- name: Create the mongo-replica working directory
+  file: path=/tmp/mongo-replica state=directory mode=0755
+ 
+- name: Copy the primary.js script to /tmp/mongo-replica
+  template:
+    src=templates/primary.js 
+    dst=/tmp/mongo-replica/primary.js

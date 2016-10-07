@@ -2,4 +2,9 @@
 - hosts: mongo_cluster
   remote_user: emerson
   roles:
+  - mongo_common
+
+- hosts: mongo_primary
+  remote_user: emerson
+  roles:
   - mongo_primary
