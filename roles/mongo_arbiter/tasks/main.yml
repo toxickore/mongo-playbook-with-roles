@@ -1,0 +1,12 @@
+---
+- name: Create the mongo-arbiter working directory
+  file: path=/tmp/mongo-replica state=directory mode=0755
+
+- name: Copy the arbiter.js script to /tmp/mongo-replica
+  copy: src=arbiter.js dest=/tmp/mongo-replica/arbiter.js
+
+- name: Copy the arbiter.js script to /tmp/mongo-replica
+  copy: src=arbiter.js dest=/tmp/mongo-replica/arbiter.js
+
+- name: Run the arbiter.js script
+  shell: mongo --port 27017 /tmp/mongo-replica/arbiter.js

@@ -9,7 +9,7 @@
   roles:
   - mongo_primary
 
-#- hosts: mongo_secondary
-#  remote_user: emerson
-#  roles:
-#  - mongo_secondary
+- hosts: mongo_arbiter
+  remote_user: emerson
+  roles:
+  - mongo_arbiter
