@@ -14,3 +14,5 @@
 
   - name: Start mongo daemon
     shell: daemon -- /usr/bin/mongod --config /etc/mongodb.conf --replSet rs0
+
+  #- pause: seconds=15
