@@ -1,0 +1,6 @@
+---
+- name: Create the mongo-replica working directory
+  file: path=/tmp/mongo-replica state=directory mode=0755
+ 
+- name: Copy the secondary.js script to /tmp/mongo-replica
+  copy: src=secondary.js dest=/tmp/mongo-replica/secondary.js

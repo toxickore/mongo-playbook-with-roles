@@ -8,3 +8,8 @@
   remote_user: emerson
   roles:
   - mongo_primary
+
+#- hosts: mongo_secondary
+#  remote_user: emerson
+#  roles:
+#  - mongo_secondary

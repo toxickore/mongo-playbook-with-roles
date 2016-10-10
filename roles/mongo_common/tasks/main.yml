@@ -1,4 +1,16 @@
 ---
   - name: Install mongodb-server
-    apt: name=mongodb-server state=absent
+    apt: name=mongodb-server state=latest
+    #apt: name=mongodb-server state=absent
     #state=absent while still working on this playbook role
+  - name: Install daemon package
+    apt: name=daemon state=latest
+
+  - name: Create mongo dbpath
+    file: path=/data/db state=directory mode=0755
+
+  - name: Copy the mongob.conf custom configuration
+    copy: src=mongod.conf dest=/etc/mongodb.conf
+
+  - name: Start mongo daemon
+    shell: daemon -- /usr/bin/mongod --config /etc/mongodb.conf --replSet rs0
