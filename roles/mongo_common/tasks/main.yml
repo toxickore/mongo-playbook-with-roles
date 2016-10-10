@@ -1,8 +1,7 @@
 ---
   - name: Install mongodb-server
     apt: name=mongodb-server state=latest
-    #apt: name=mongodb-server state=absent
-    #state=absent while still working on this playbook role
+  
   - name: Install daemon package
     apt: name=daemon state=latest
 
