@@ -13,7 +13,7 @@
 - name: Start replica set configuration
   shell: mongo --port 27017 /tmp/mongo-replica/start_rs.js
 
-# - pause: seconds=20
+- pause: seconds=20
 
-#- name: Forcing node 01 as primary for replica set
-#  shell: mongo --port 27017 /tmp/mongo-replica/primary.js
+- name: Changing replica set priority node 01 as primary
+  shell: mongo --port 27017 /tmp/mongo-replica/primary.js
