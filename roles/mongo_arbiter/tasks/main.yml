@@ -10,6 +10,3 @@
 
 - name: Run the arbiter.js script
   shell: mongo --port 27017 /tmp/mongo-replica/arbiter.js
-
-#- name: Adding arbiter node
-#  shell: mongo 192.168.56.103:27017 /tmp/mongo-replica/arbiter.js
