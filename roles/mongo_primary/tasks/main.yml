@@ -17,3 +17,5 @@
 
 - name: Changing replica set priority node 01 as primary
   shell: mongo --port 27017 /tmp/mongo-replica/primary.js
+
+- pause: minutes=1
